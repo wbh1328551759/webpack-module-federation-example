@@ -1,0 +1,17 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.0",
+    "lerna": "^4.0.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:component": "lerna exec --scope component-app -- yarn dev",
+    "start:main": "lerna exec --scope main-app -- yarn dev",
+    "start": "npx lerna run dev --parallel",
+    "build": "npx lerna run build --parallel"
+  }
+}
